@@ -53,7 +53,7 @@ def get_member(id):
 def delete_member(id):
     member = jackson_family.get_member(id)
     if len(member) == 0:
-        return "Famili member id not found", 400
+        return "Famili member id not found", 404
     else:
         jackson_family.delete_member(id)
         return jsonify({"done":True}),200
